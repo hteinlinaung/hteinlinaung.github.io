@@ -8,17 +8,18 @@
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">	
+	
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">	
  
  
   <!-- Theme style -->
   <link rel="stylesheet" href="dist1/css/AdminLTE.css">
+  <link rel="stylesheet" href="dist1/css/sweetalert.css">
    
 </head>
 <body>
 	<br>
-	<div class="container theme-showcase" role="main">	
+	<div id="app" class="container theme-showcase" role="main">	
 		<div class="jumbotron">
 
     		<h1>My Sample Project</h1>
@@ -26,10 +27,30 @@
     		<p>Use it as a starting point to create something more unique by
 	        building on or modifying it.
 	    	</p>
+			
+			<button v-on:click="alertshow" class="btn btn-success">Click Me</button>
+
 
 		</div>
 	</div>
 	
 	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="dist1/js/sweetalert.js"></script>
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/vue/dist/vue.min.js"></script>
+	<script>
+			
+			new Vue({
+				el: "#app",
+				data: {
+					
+				},
+				methods: {
+					alertshow: function(){
+						alert()->success('Title', 'Message');
+					}
+					
+				}
+	</script>
 </body>
 </html>
