@@ -179,7 +179,7 @@ a:focus {
     width: 100%;
     position: absolute;
     padding: 15px;
-    margin-top: 80px;
+    margin-top: 70px;
     border: 2px gray ;
 }
 
@@ -233,20 +233,13 @@ a:focus {
     transition: all 1s ease;
 }
 
-.navbar a i{
+.navbar i{
   padding: 15px;
 
 }
 
-.top-nav-brand {
-    font-family: 'Helvetica Neue';
-    color: #d35400;
-    font-weight: 200px;
-    line-height: 50px;
-    display: block;
-    text-align: left;
-    font-size: 22px;
-    padding-left: 20px;
+.navbar-brand
+{
+  font-size: 25px;
 }
-
 
