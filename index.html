@@ -1,3 +1,4 @@
+<?php
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,18 +8,44 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+  <link rel="stylesheet" href="dist1/css/AdminLTE.css">
    
 </head>
 <body>
-	<br>
-	<div class="container theme-showcase" role="main">	
-		<div class="jumbotron">
-    		<h1>My Fist Day In Singapore</h1>
+		
+	<div id="wrapper">
 
-    		<p>This Country is one of the most developed countries...
-	    	</p>
-	    	<p>To be continued...</p>
-		</div>
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+
+            <ul class="sidebar-nav">
+            	<div class="brand">Admin</div>
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </div>
+	
+	
+	
+	
+	<div id="page-content-wrapper">
+		<nav class="navbar navbar-default navbar-fixed-top top-nav">
+
+			<div class="row">
+				<div class="col-md-1"><a href="#" id="menu-toggle"><i class="fa fa-bars fa-2x"></i></a></div>
+				<div class="col-md-2"><p class="navbar-brand">Blog</p></div>
+				
+			</div>
+				 
+		</nav>
+		
+						
+	<div class="container" role="main">
 
 		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 			  <!-- Indicators -->
@@ -41,14 +68,14 @@
 			    <div class="item">
 			      <img src="img/sg2.jpg" alt="...">
 			      <div class="carousel-caption">
-			        Beaytiful Me
+			        Our Beautiful Department
 			      </div>
 			    </div>
 
 			    <div class="item">
 			      <img src="img/sg3.jpg" alt="...">
 			      <div class="carousel-caption">
-			        Beautifual Marina Bay
+			        Beautiful Marina Bay
 			      </div>
 			    </div>
 			    
@@ -66,13 +93,51 @@
 			  </a>
 		</div>
 
+		<hr>
+
+		<div class="well">
+			
+		
+			<div class="row">
+			      <div class="col-md-4">
+			      	<p>&copy;2016-2017 Blog All rights Reserved.</p> 
+			      </div>
+			      <div class="col-md-6">
+			      		Come & Join with me via
+			    
+					  	<a href="https://facebook.com/htein.l.aung?" >
+					  	<i class="fa fa-facebook"></i> Facebook</a>
+					    - OR - <a href="https://github.com/hteinlinaung" >
+						<i class="fa fa-github">Github</i></a>
+			      </div>
+			      <div class="col-md-2">
+			      	<a href="">About |</a>
+			      	<a href="">Terms & Conditions</a>
+			      </div>
+			      
+								
+				
+		    </div>
+		    
+		</div>
+
 		
 
+		
+	
+	</div>
+	</div>
 	</div>
 	<br>
 	
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script>
+        $("#menu-toggle").click( function (e){
+            e.preventDefault();
+            $("#wrapper").toggleClass("menuDisplayed");
+        });
+    </script>
 
 </body>
 </html>
