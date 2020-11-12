@@ -80,48 +80,60 @@ function setup() {
     // make the sprite interactive
     backwardbtn.interactive = true;
     backwardbtn.buttonMode = true;
-    backwardbtn.on('pointertap', () => {
+    backwardbtn.on('pointerdown', () => {
         explorer.vx = -5;
         explorer.vy = 0;
+    });
+    backwardbtn.on('pointerup', () => {
+        explorer.vx = 0;
     });
     gameScene.addChild(backwardbtn);
 
     //upwardbtn
     upwardbtn = new Sprite(moveid["upward.png"]);
-    upwardbtn.position.set(50, dungeon.height + 30);
+    upwardbtn.position.set(20 + backwardbtn.width, dungeon.height + 30 - backwardbtn.height);
     upwardbtn.scale.set(0.4, 0.4);
     // make the sprite interactive
     upwardbtn.interactive = true;
     upwardbtn.buttonMode = true;
-    upwardbtn.on('pointertap', () => {
+    upwardbtn.on('pointerdown', () => {
         explorer.vy = -5;
         explorer.vx = 0;
+    });
+    upwardbtn.on('pointerup', () => {
+        explorer.vy = 0;
     });
     gameScene.addChild(upwardbtn);
 
     //forwardbtn
     forwardbtn = new Sprite(moveid["forward.png"]);
-    forwardbtn.position.set(80, dungeon.height + 30);
+    forwardbtn.position.set(20 + upwardbtn.width, dungeon.height + 30);
     forwardbtn.scale.set(0.4, 0.4);
     // make the sprite interactive
     forwardbtn.interactive = true;
     forwardbtn.buttonMode = true;
-    forwardbtn.on('pointertap', () => {
+    forwardbtn.on('pointerdown', () => {
         explorer.vx = 5;
         explorer.vy = 0;
+    });
+    forwardbtn.on('pointerup', () => {
+        explorer.vx = 0;
     });
     gameScene.addChild(forwardbtn);
 
     //downwardbtn
     downwardbtn = new Sprite(moveid["downward.png"]);
-    downwardbtn.position.set(110, dungeon.height + 30);
+    downwardbtn.position.set(20 + backwardbtn.width, dungeon.height + 30 + backwardbtn.height);
     downwardbtn.scale.set(0.4, 0.4);
     // make the sprite interactive
     downwardbtn.interactive = true;
     downwardbtn.buttonMode = true;
-    downwardbtn.on('pointertap', () => {
+    downwardbtn.on('pointerdown', () => {
         explorer.vy = 5;
         explorer.vx = 0;
+    });
+    downwardbtn.on('pointerup', () => {
+        explorer.vy = 0;
     });
     gameScene.addChild(downwardbtn);
 
