@@ -30,6 +30,7 @@ document.body.appendChild(app.view);
 
 loader
     .add("dist/images/spritesheets/treasureHunter.json")
+    .add("dist/images/spritesheets/move.json")
     .load(setup);
 
 //Define variables that might be used in more 
@@ -46,6 +47,7 @@ function setup() {
     //Make the sprites and add them to the `gameScene`
     //Create an alias for the texture atlas frame ids
     id = resources["dist/images/spritesheets/treasureHunter.json"].textures;
+    moveid = resources["dist/images/spritesheets/move.json"].textures;
 
     //Dungeon
     dungeon = new Sprite(id["dungeon.png"]);
@@ -69,6 +71,11 @@ function setup() {
     treasure.x = gameScene.width - treasure.width - 48;
     treasure.y = gameScene.height / 2 - treasure.height / 2;
     gameScene.addChild(treasure);
+
+    //forwardbtn
+    forwardbtn = new Sprite(id["forward.png"]);
+    forwardbtn.position.set(32, gameScene.height);
+    gameScene.addChild(forwardbtn);
 
     //Make the blobs
     let numberOfBlobs = 6,
