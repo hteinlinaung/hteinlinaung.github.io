@@ -74,8 +74,15 @@ function setup() {
 
     //forwardbtn
     forwardbtn = new Sprite(moveid["forward.png"]);
-    forwardbtn.position.set(32, gameScene.height);
+    forwardbtn.position.set(50, gameScene.height);
+    forwardbtn.scale.set(0.6, 0.6);
     gameScene.addChild(forwardbtn);
+
+    //backwardbtn
+    backwardbtn = new Sprite(moveid["backward.png"]);
+    backwardbtn.position.set(20, gameScene.height);
+    backwardbtn.scale.set(0.6, 0.6);
+    gameScene.addChild(backwardbtn);
 
     //Make the blobs
     let numberOfBlobs = 6,
