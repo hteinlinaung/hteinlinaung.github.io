@@ -72,27 +72,28 @@ function setup() {
     treasure.y = gameScene.height / 2 - treasure.height / 2;
     gameScene.addChild(treasure);
 
-    //forwardbtn
-    forwardbtn = new Sprite(moveid["forward.png"]);
-    forwardbtn.position.set(100, gameScene.height);
-    forwardbtn.scale.set(0.4, 0.4);
-    gameScene.addChild(forwardbtn);
 
     //backwardbtn
     backwardbtn = new Sprite(moveid["backward.png"]);
-    backwardbtn.position.set(50, gameScene.height);
+    backwardbtn.position.set(20, gameScene.height + 50);
     backwardbtn.scale.set(0.4, 0.4);
     gameScene.addChild(backwardbtn);
 
     //upwardbtn
     upwardbtn = new Sprite(moveid["upward.png"]);
-    upwardbtn.position.set(20, gameScene.height-50);
+    upwardbtn.position.set(20 + backwardbtn.width, gameScene.height + 50 - backwardbtn.height);
     upwardbtn.scale.set(0.4, 0.4);
     gameScene.addChild(upwardbtn);
 
+    //forwardbtn
+    forwardbtn = new Sprite(moveid["forward.png"]);
+    forwardbtn.position.set(20 + backwardbtn.width, gameScene.height + 50);
+    forwardbtn.scale.set(0.4, 0.4);
+    gameScene.addChild(forwardbtn);
+
     //downwardbtn
     downwardbtn = new Sprite(moveid["downward.png"]);
-    downwardbtn.position.set(20, gameScene.height+50);
+    downwardbtn.position.set(20 + backwardbtn.width, gameScene.height + 50 + backwardbtn.height);
     downwardbtn.scale.set(0.4, 0.4);
     gameScene.addChild(downwardbtn);
 
