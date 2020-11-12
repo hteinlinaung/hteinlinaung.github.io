@@ -75,25 +75,34 @@ function setup() {
 
     //backwardbtn
     backwardbtn = new Sprite(moveid["backward.png"]);
-    backwardbtn.position.set(20, gameScene.height + 50);
+    backwardbtn.position.set(20, gameScene.height);
     backwardbtn.scale.set(0.4, 0.4);
+    // make the sprite interactive
+    backwardbtn.interactive = true;
+    backwardbtn.buttonMode = true;
+    backwardbtn.on('pointertap', () => {
+        explorer.vx = -5;
+        explorer.vy = 0;
+    });
     gameScene.addChild(backwardbtn);
+    
+
 
     //upwardbtn
     upwardbtn = new Sprite(moveid["upward.png"]);
-    upwardbtn.position.set(20 + backwardbtn.width, gameScene.height + 50 - backwardbtn.height);
+    upwardbtn.position.set(50, gameScene.height);
     upwardbtn.scale.set(0.4, 0.4);
     gameScene.addChild(upwardbtn);
 
     //forwardbtn
     forwardbtn = new Sprite(moveid["forward.png"]);
-    forwardbtn.position.set(20 + backwardbtn.width, gameScene.height + 50);
+    forwardbtn.position.set(80, gameScene.height);
     forwardbtn.scale.set(0.4, 0.4);
     gameScene.addChild(forwardbtn);
 
     //downwardbtn
     downwardbtn = new Sprite(moveid["downward.png"]);
-    downwardbtn.position.set(20 + backwardbtn.width, gameScene.height + 50 + backwardbtn.height);
+    downwardbtn.position.set(110, gameScene.height);
     downwardbtn.scale.set(0.4, 0.4);
     gameScene.addChild(downwardbtn);
 
