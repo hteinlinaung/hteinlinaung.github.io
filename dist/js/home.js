@@ -73,7 +73,7 @@ function setup() {
     gameScene.addChild(treasure);
 
     //forwardbtn
-    forwardbtn = new Sprite(id["forward.png"]);
+    forwardbtn = new Sprite(moveid["forward.png"]);
     forwardbtn.position.set(32, gameScene.height);
     gameScene.addChild(forwardbtn);
 
