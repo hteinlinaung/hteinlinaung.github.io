@@ -75,8 +75,7 @@ function setup() {
 
     //backwardbtn
     backwardbtn = new Sprite(moveid["backward.png"]);
-    backwardbtn.position.set(20, dungeon.height + 30);
-    backwardbtn.scale.set(0.4, 0.4);
+    backwardbtn.position.set(dungeon.width, (dungeon.height / 2) + 30);
     // make the sprite interactive
     backwardbtn.interactive = true;
     backwardbtn.buttonMode = true;
@@ -91,8 +90,7 @@ function setup() {
 
     //upwardbtn
     upwardbtn = new Sprite(moveid["upward.png"]);
-    upwardbtn.position.set(20 + backwardbtn.width, dungeon.height + 30 - backwardbtn.height);
-    upwardbtn.scale.set(0.4, 0.4);
+    upwardbtn.position.set(dungeon.width + backwardbtn.width, (dungeon.height / 2) + 30 - backwardbtn.height);
     // make the sprite interactive
     upwardbtn.interactive = true;
     upwardbtn.buttonMode = true;
@@ -107,8 +105,7 @@ function setup() {
 
     //forwardbtn
     forwardbtn = new Sprite(moveid["forward.png"]);
-    forwardbtn.position.set(20 + backwardbtn.width + upwardbtn.width, dungeon.height + 30);
-    forwardbtn.scale.set(0.4, 0.4);
+    forwardbtn.position.set(dungeon.width + backwardbtn.width + upwardbtn.width, (dungeon.height / 2) + 30);
     // make the sprite interactive
     forwardbtn.interactive = true;
     forwardbtn.buttonMode = true;
@@ -123,8 +120,7 @@ function setup() {
 
     //downwardbtn
     downwardbtn = new Sprite(moveid["downward.png"]);
-    downwardbtn.position.set(20 + backwardbtn.width, dungeon.height + 30 + backwardbtn.height);
-    downwardbtn.scale.set(0.4, 0.4);
+    downwardbtn.position.set(dungeon.width + backwardbtn.width, (dungeon.height / 2) + 30 + backwardbtn.height);
     // make the sprite interactive
     downwardbtn.interactive = true;
     downwardbtn.buttonMode = true;
