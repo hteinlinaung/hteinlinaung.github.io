@@ -107,7 +107,7 @@ function setup() {
 
     //forwardbtn
     forwardbtn = new Sprite(moveid["forward.png"]);
-    forwardbtn.position.set(20 + upwardbtn.width, dungeon.height + 30);
+    forwardbtn.position.set(20 + backwardbtn.width + upwardbtn.width, dungeon.height + 30);
     forwardbtn.scale.set(0.4, 0.4);
     // make the sprite interactive
     forwardbtn.interactive = true;
