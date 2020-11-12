@@ -24,7 +24,7 @@ let app = new Application({
 document.body.appendChild(app.view);
 
 loader
-    .add("images/spritesheets/treasureHunter.json")
+    .add("dist/images/spritesheets/treasureHunter.json")
     .load(setup);
 
 //Define variables that might be used in more 
@@ -40,7 +40,7 @@ function setup() {
 
     //Make the sprites and add them to the `gameScene`
     //Create an alias for the texture atlas frame ids
-    id = resources["images/spritesheets/treasureHunter.json"].textures;
+    id = resources["dist/images/spritesheets/treasureHunter.json"].textures;
 
     //Dungeon
     dungeon = new Sprite(id["dungeon.png"]);
