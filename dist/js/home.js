@@ -75,7 +75,7 @@ function setup() {
 
     //backwardbtn
     backwardbtn = new Sprite(moveid["backward.png"]);
-    backwardbtn.position.set(20, gameScene.height);
+    backwardbtn.position.set(20, dungeon.height + 30);
     backwardbtn.scale.set(0.4, 0.4);
     // make the sprite interactive
     backwardbtn.interactive = true;
@@ -85,25 +85,44 @@ function setup() {
         explorer.vy = 0;
     });
     gameScene.addChild(backwardbtn);
-    
-
 
     //upwardbtn
     upwardbtn = new Sprite(moveid["upward.png"]);
-    upwardbtn.position.set(50, gameScene.height);
+    upwardbtn.position.set(50, dungeon.height + 30);
     upwardbtn.scale.set(0.4, 0.4);
+    // make the sprite interactive
+    upwardbtn.interactive = true;
+    upwardbtn.buttonMode = true;
+    upwardbtn.on('pointertap', () => {
+        explorer.vy = -5;
+        explorer.vx = 0;
+    });
     gameScene.addChild(upwardbtn);
 
     //forwardbtn
     forwardbtn = new Sprite(moveid["forward.png"]);
-    forwardbtn.position.set(80, gameScene.height);
+    forwardbtn.position.set(80, dungeon.height + 30);
     forwardbtn.scale.set(0.4, 0.4);
+    // make the sprite interactive
+    forwardbtn.interactive = true;
+    forwardbtn.buttonMode = true;
+    forwardbtn.on('pointertap', () => {
+        explorer.vx = 5;
+        explorer.vy = 0;
+    });
     gameScene.addChild(forwardbtn);
 
     //downwardbtn
     downwardbtn = new Sprite(moveid["downward.png"]);
-    downwardbtn.position.set(110, gameScene.height);
+    downwardbtn.position.set(110, dungeon.height + 30);
     downwardbtn.scale.set(0.4, 0.4);
+    // make the sprite interactive
+    downwardbtn.interactive = true;
+    downwardbtn.buttonMode = true;
+    downwardbtn.on('pointertap', () => {
+        explorer.vy = 5;
+        explorer.vx = 0;
+    });
     gameScene.addChild(downwardbtn);
 
     //Make the blobs
